@@ -16,7 +16,7 @@ class AppRoutes {
   static const String signUp = "/sign_up.dart";
   static const String splash = "/splash_screen.dart";
   static const String checkEmail = "/check_email_page.dart";
-  static const String otpVerification = "/check_email_page.dart";
+  static const String otpVerification = "/otp_verification_page.dart";
   static const String forgotPasswordPage = "/fotgot_password.dart";
   static const String getStarted1 = "/get_started_page1.dart";
   static const String getStarted2 = "/get_started_page2.dart";

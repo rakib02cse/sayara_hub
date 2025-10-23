@@ -42,14 +42,12 @@ class SignUp extends StatelessWidget {
               ),
 
               const SizedBox(height: 50),
-
-              // 🟩 Email TextField
               TextField(
-                controller: controller.emailController,
-                keyboardType: TextInputType.emailAddress,
+                controller: controller.nameController,
+                keyboardType: TextInputType.name,
                 decoration: InputDecoration(
                   hintText: "Leonardo Smith",
-                  prefixIcon: const Icon(Icons.email_outlined),
+                  prefixIcon: const Icon(Icons.man_2_outlined),
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
                   filled: true,
@@ -62,13 +60,11 @@ class SignUp extends StatelessWidget {
               ),
 
               const SizedBox(height: 15),
-
-              // 🟩 Email TextField
               TextField(
                 controller: controller.emailController,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  hintText: "www.ulhut@gmail.com",
+                  hintText: "www.uihut@gmail.com",
                   prefixIcon: const Icon(Icons.email_outlined),
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
@@ -82,8 +78,6 @@ class SignUp extends StatelessWidget {
               ),
 
               const SizedBox(height: 20),
-
-              // 🟩 Password TextField
               Obx(
                 () => TextField(
                   controller: controller.passwordController,
@@ -115,29 +109,23 @@ class SignUp extends StatelessWidget {
 
               Align(
                 alignment: Alignment.centerLeft,
-                child: GestureDetector(
-                  onTap: () {},
-                  child: const Text(
-                    "Password must be 8 character",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      //fontWeight: FontWeight.w600,
-                      fontSize: 12,
-                    ),
+                child: const Text(
+                  "Password must be 8 characters",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 7, 7, 7),
+                    fontSize: 12,
                   ),
                 ),
               ),
 
               const SizedBox(height: 35),
-
-              // 🟦 Sign In Button
               Obx(
                 () => SizedBox(
                   width: size.width,
                   height: 55,
                   child: ElevatedButton(
                     onPressed:
-                        controller.isLoading.value ? null : controller.signIn,
+                        controller.isLoading.value ? null : controller.signUp,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(
@@ -161,6 +149,7 @@ class SignUp extends StatelessWidget {
               ),
 
               const SizedBox(height: 15),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -172,21 +161,11 @@ class SignUp extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-
-                  // const SizedBox(
-                  //     width: size.width * 0.6,
-                  //     height: 55,
-                  //     child: ElevatedButton(
-                  //       onPressed: () {
-                  //         Get.offNamed(AppRoutes.signUp);
-                  //       },
-                  //     ))
-
-                   TextButton(
-                      onPressed: () {
-                        Get.offNamed(AppRoutes.signIn);
-                      },
-                      child: const Text(
+                  TextButton(
+                    onPressed: () {
+                      Get.offNamed(AppRoutes.signIn);
+                    },
+                    child: const Text(
                       "Sign In",
                       style: TextStyle(
                         color: Colors.green,
@@ -194,22 +173,11 @@ class SignUp extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    ),
-
-                  // GestureDetector(
-                  //   onTap: () {Get.offAllNamed(AppRoutes.signUp);},   //controller.goToSignUp,
-                  //   child: const Text(
-                  //     "Sign Up",
-                  //     style: TextStyle(
-                  //       color: Colors.green,
-                  //       fontSize: 16,
-                  //       fontWeight: FontWeight.bold,
-                  //     ),
-                  //   ),
-                  // ),
+                  ),
                 ],
               ),
 
+              const SizedBox(height: 20),
               const Center(
                 child: Text(
                   "Or",
@@ -223,10 +191,8 @@ class SignUp extends StatelessWidget {
 
               const SizedBox(height: 35),
 
-              // 🟤 Social Buttons (Google & Apple in next line)
               Column(
                 children: [
-                  // Google Button
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
@@ -253,8 +219,6 @@ class SignUp extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 15),
-
-                  // Apple Button
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(

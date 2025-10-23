@@ -11,17 +11,19 @@ class ForgotPasswordController extends GetxController {
     }
 
     isLoading.value = true;
-    await Future.delayed(const Duration(seconds: 2)); // simulate API call
+    await Future.delayed(const Duration(seconds: 2)); 
     isLoading.value = false;
 
-    // After email sent
-    Get.toNamed('/checkEmail');
+    try {
+      Get.toNamed('/checkEmail');
+    } catch (e) {
+      Get.snackbar("Error", "Navigation failed: $e");
+    }
   }
 
   void verifyOtp(String otp) async {
     if (otp == "8642") {
       Get.snackbar("Success", "OTP Verified Successfully");
-      // Redirect to reset password screen if needed
     } else {
       Get.snackbar("Error", "Invalid OTP");
     }

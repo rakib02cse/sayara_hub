@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'controller/forgot_password_controller.dart';
+import '../sign_in_screen/sign_in.dart'; // ✅ Import your SignIn page
 
 class ForgotPasswordPage extends StatelessWidget {
   final ForgotPasswordController controller = Get.put(ForgotPasswordController());
@@ -9,7 +10,13 @@ class ForgotPasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(color: Colors.black),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () {
+            // ✅ Navigate to SignIn page when back button is pressed
+            Get.offAll(() => SignIn());
+          },
+        ),
         elevation: 0,
         backgroundColor: Colors.white,
       ),
@@ -33,7 +40,9 @@ class ForgotPasswordPage extends StatelessWidget {
               onChanged: (value) => controller.email.value = value,
               decoration: InputDecoration(
                 hintText: "Enter your email",
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 filled: true,
                 fillColor: Colors.grey.shade100,
               ),
@@ -43,7 +52,9 @@ class ForgotPasswordPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(double.infinity, 50),
                     backgroundColor: Colors.blue,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                   onPressed: controller.isLoading.value
                       ? null

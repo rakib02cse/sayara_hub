@@ -20,22 +20,13 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Stack(
         alignment: Alignment.center,
         children: [
-          // Optional background pattern (if exists in Figma)
           const Opacity(
             opacity: 0.03,
             child: SizedBox(
               width: double.infinity,
               height: double.infinity,
-              // decoration: BoxDecoration(
-              //   image: DecorationImage(
-              //     image: AssetImage(AppImages.splashBg),
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
             ),
           ),
-
-          // Centered Circular Logo
           Center(
             child: ClipOval(
               child: SizedBox(
@@ -46,7 +37,6 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
 
-          // Bottom Button
           Positioned(
             bottom: 50,
             child: SizedBox(
@@ -57,14 +47,14 @@ class _SplashScreenState extends State<SplashScreen> {
                   Get.toNamed(AppRoutes.getStarted1);
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF1E88E5), // match Figma blue
+                  backgroundColor: const Color(0xFF1E88E5), 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                   elevation: 4,
                 ),
                 child: const Text(
-                  'Lets go', // match your Figma button text
+                  'Lets go', 
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,

@@ -57,14 +57,11 @@ class GetStartedPage2 extends StatelessWidget {
                   ],
                 ),
               ),
-
-              // Bottom Buttons (Skip & Next)
               Padding(
                 padding: const EdgeInsets.only(bottom: 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Skip Button
                     TextButton(
                       onPressed: () {
                         Get.offNamed(AppRoutes.getStarted3);
@@ -78,7 +75,6 @@ class GetStartedPage2 extends StatelessWidget {
                       ),
                     ),
 
-                    // Next Button
                     SizedBox(
                       width: size.width * 0.6,
                       height: 55,

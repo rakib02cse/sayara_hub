@@ -20,8 +20,6 @@ class SignIn extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 100),
-
-              // 🟢 Title
               const Text(
                 "Sign in now",
                 textAlign: TextAlign.center,
@@ -43,7 +41,6 @@ class SignIn extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // 🟩 Email TextField
               TextField(
                 controller: controller.emailController,
                 keyboardType: TextInputType.emailAddress,
@@ -63,7 +60,7 @@ class SignIn extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // 🟩 Password TextField
+          
               Obx(
                 () => TextField(
                   controller: controller.passwordController,
@@ -92,21 +89,6 @@ class SignIn extends StatelessWidget {
               ),
 
               const SizedBox(height: 10),
-
-              //  TextButton(
-              //         onPressed: () {
-              //           Get.offNamed(AppRoutes.signUp);
-              //         },
-              //         child: const Text(
-              //         "Sign Up",
-              //         style: TextStyle(
-              //           color: Colors.green,
-              //           fontSize: 16,
-              //           fontWeight: FontWeight.bold,
-              //         ),
-              //       ),
-              //       ),
-
               Align(
                 alignment: Alignment.centerRight,
                 child: GestureDetector(
@@ -126,7 +108,6 @@ class SignIn extends StatelessWidget {
 
               const SizedBox(height: 35),
 
-              // 🟦 Sign In Button
               Obx(
                 () => SizedBox(
                   width: size.width,
@@ -169,15 +150,6 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
 
-                  // const SizedBox(
-                  //     width: size.width * 0.6,
-                  //     height: 55,
-                  //     child: ElevatedButton(
-                  //       onPressed: () {
-                  //         Get.offNamed(AppRoutes.signUp);
-                  //       },
-                  //     ))
-
                    TextButton(
                       onPressed: () {
                         Get.offNamed(AppRoutes.signUp);
@@ -191,18 +163,6 @@ class SignIn extends StatelessWidget {
                       ),
                     ),
                     ),
-
-                  // GestureDetector(
-                  //   onTap: () {Get.offAllNamed(AppRoutes.signUp);},   //controller.goToSignUp,
-                  //   child: const Text(
-                  //     "Sign Up",
-                  //     style: TextStyle(
-                  //       color: Colors.green,
-                  //       fontSize: 16,
-                  //       fontWeight: FontWeight.bold,
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               ),
 
@@ -218,8 +178,6 @@ class SignIn extends StatelessWidget {
               ),
 
               const SizedBox(height: 35),
-
-              // 🟤 Social Buttons (Google & Apple in next line)
               Column(
                 children: [
                   // Google Button
@@ -249,8 +207,6 @@ class SignIn extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 15),
-
-                  // Apple Button
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(

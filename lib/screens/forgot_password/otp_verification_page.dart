@@ -46,7 +46,6 @@ class OtpVerificationPage extends StatelessWidget {
             ),
             const SizedBox(height: 12),
 
-            // -> pin_code_fields widget
             PinCodeTextField(
               appContext: context,
               length: 4,
@@ -68,7 +67,6 @@ class OtpVerificationPage extends StatelessWidget {
               cursorColor: Colors.black,
               enableActiveFill: true,
               onChanged: (value) {
-                // optional: handle changes
               },
               onCompleted: (value) {
                 controller.verifyOtp(value);
@@ -83,8 +81,6 @@ class OtpVerificationPage extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    // optionally: call verify with a stored otp value
-                    // controller.verifyOtp(otpValue);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
@@ -99,7 +95,6 @@ class OtpVerificationPage extends StatelessWidget {
 
             const SizedBox(height: 14),
 
-            // resend / timer row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [

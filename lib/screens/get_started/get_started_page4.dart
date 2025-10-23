@@ -18,7 +18,6 @@ class GetStartedPage4 extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Top Image
               Expanded(
                 flex: 6,
                 child: Center(
@@ -30,7 +29,6 @@ class GetStartedPage4 extends StatelessWidget {
                 ),
               ),
 
-              // Title & Description
               const Expanded(
                 flex: 3,
                 child: Column(
@@ -59,13 +57,11 @@ class GetStartedPage4 extends StatelessWidget {
                 ),
               ),
 
-              // Bottom Buttons (Skip & Next)
               Padding(
                 padding: const EdgeInsets.only(bottom: 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Skip Button
                     TextButton(
                       onPressed: () {
                         Get.offNamed(AppRoutes.signIn);
@@ -79,7 +75,6 @@ class GetStartedPage4 extends StatelessWidget {
                       ),
                     ),
 
-                    // Next Button
                     SizedBox(
                       width: size.width * 0.6,
                       height: 55,

@@ -24,11 +24,9 @@ class SignInController extends GetxController {
     Future.delayed(const Duration(seconds: 2), () {
       isLoading.value = false;
       Get.snackbar("Success", "Login Successful!");
-      // Get.offNamed(AppRoutes.home);
     });
   }
 
   void goToSignUp() {
-    // Get.toNamed(AppRoutes.signUp);
   }
 }
